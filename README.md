@@ -57,7 +57,7 @@
         <ul>
             <li>Install the required Python dependencies.</li>
             <li>Place the target PCAP file in the project directory.</li>
-            <li>Run the script using: <code>python anomaly_detection.py</code></li>
+            <li>Run the script using: <code>python main.py yourPcapFile.pcap</code></li>
             <li>Check the generated <code>report.csv</code> for the analysis results.</li>
         </ul>
     </section>
