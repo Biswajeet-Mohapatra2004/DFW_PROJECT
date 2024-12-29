@@ -4,54 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReadMe - Anomaly Detection in Network Packets</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-        section {
-            padding: 20px;
-            margin: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #333;
-            font-size: 1.5rem;
-        }
-        p {
-            color: #555;
-            line-height: 1.6;
-        }
-        ul {
-            margin: 10px 0;
-            padding: 0 20px;
-            color: #555;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
-        .code-block {
-            background: #f0f0f0;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            font-family: monospace;
-        }
-    </style>
+    
 </head>
 <body>
     <header>
