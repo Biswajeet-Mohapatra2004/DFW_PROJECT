@@ -18,13 +18,16 @@ def loadPcap(fileName):
     # Inspect packets
     return packets
 
-def detectNSP(packet):
+def detectNSP(packets):
+    nspIPs=set()
     # Non-standard ports detection
-    if packet.haslayer('TCP'):
-        tcp_layer = packet['TCP']
-        if tcp_layer.dport not in [80, 443, 22]:  # Standard ports (HTTP, HTTPS, SSH)
-            if packet.haslayer('IP'):
-                return packet['IP'].src
+    for packet in packets:
+        if packet.haslayer('TCP'):
+            tcp_layer = packet['TCP']
+            if tcp_layer.dport not in [80, 443, 22]:  # Standard ports (HTTP, HTTPS, SSH)
+                if packet.haslayer('IP'):
+                     nspIPs.add(packet['IP'].src)
+    return nspIPs
 
 def detectDDOS(packets):
     ip_count = Counter()

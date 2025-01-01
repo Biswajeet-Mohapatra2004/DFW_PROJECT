@@ -5,9 +5,7 @@ fileName=sys.argv[1]
 packets=load.loadPcap(fileName)
 ipMacs=load.findIpAndMac(packets)
 
-ips=set()
-for packet in packets:
-    ips.add(load.detectNSP(packet))
+NSPs=load.detectNSP(packets)
 
 ddos_ip=load.detectDDOS(packets)
 
@@ -23,5 +21,5 @@ largeDNS=load.detectLargeDNSResponses(packets)
 
 excessICMP=load.detectExcessiveICMPEcho(packets)
 
-writeCSV.generateReport(ipMacs,ddos_ip,exceed_size_ips,FloodIps,multipleScan,unsolicatedArp,largeDNS,excessICMP)
+writeCSV.generateReport(ipMacs,NSPs,ddos_ip,exceed_size_ips,FloodIps,multipleScan,unsolicatedArp,largeDNS,excessICMP)
 
